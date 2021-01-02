@@ -1,7 +1,11 @@
-name: Node.js CI
+name: Build and test
 
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        description: 'Description'
+        required: false
   pull_request:
     branches:
       - master
