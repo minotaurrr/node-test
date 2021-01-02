@@ -34,7 +34,7 @@ jobs:
           chmod 600 ~/.ssh/staging.key
           cat >> ~/.ssh/config << END
           Host node-test
-            Hostname 54.252.173.191
+            Hostname 3.25.84.217
             user ubuntu
             IdentityFile ~/.ssh/staging.key
             StrictHostKeyChecking no
