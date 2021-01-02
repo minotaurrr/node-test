@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build:
+  DEPLOY:
     runs-on: ubuntu-latest
 
     strategy:
