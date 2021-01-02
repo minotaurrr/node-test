@@ -30,4 +30,4 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_KEY }}
 
       - name: Check hostname
-        run: ssh node-test 'hostname'
+        run: ssh node-test 'cd /home/ubuntu/app/node-test && /bin/bash deploy.sh'
