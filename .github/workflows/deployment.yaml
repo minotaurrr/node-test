@@ -48,4 +48,4 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_KEY }}
 
       - name: Deploying
-        run: ssh node-test 'cd /home/ubuntu/app/node-test && /bin/bash deploy.sh'
+        run: ssh node-test 'cd /home/ubuntu/app/node-test && make'
