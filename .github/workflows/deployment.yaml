@@ -2,10 +2,6 @@ name: Deployment
 
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Description'
-        required: false
   release:
     types: [published]
 

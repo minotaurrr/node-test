@@ -18,6 +18,9 @@ pull:
 run:
 	docker run -e PORT:${PORT} -d -p ${PORT}:${PORT} --name ${APP} ${IMAGE}
 
+test:
+	docker run --rm ${IMAGE} npm test
+
 build:
 	docker build -t ${IMAGE} .
 
