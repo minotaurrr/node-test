@@ -45,5 +45,10 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_KEY }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
 
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: ~/.ssh
+
       # - name: Deploying
       #   run: ssh node-test 'cd /home/ubuntu/app/node-test && make'
