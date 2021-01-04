@@ -35,13 +35,14 @@ jobs:
           chmod 600 ~/.ssh/staging.key
           cat >> ~/.ssh/config << END
           Host node-test
-            Hostname 3.25.84.217
+            Hostname $SSH_HOST
             user ubuntu
             IdentityFile ~/.ssh/staging.key
             StrictHostKeyChecking no
           END
         env:
           SSH_KEY: ${{ secrets.SSH_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
 
       - name: Deploying
         run: ssh node-test 'cd /home/ubuntu/app/node-test && make'
